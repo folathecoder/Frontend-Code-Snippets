@@ -1,0 +1,25 @@
+/*----------------------------
+  Functions
+----------------------------*/
+// ===============  take in pixels, spit out rem value (just for fun)
+
+@function rem($size) {
+    $remSize: $size / #{$base-font-size};
+    @return #{$remSize}rem;
+  }
+
+
+// font styles
+$base-font-size: 18;   // ==========  declare the base font
+$font-primary: 'Kumbh Sans', sans-serif;
+$weight-normal: 400;
+$weight-bold: 700;
+
+
+// ================== in action 
+
+.c-profile-card__stat-label {
+    font-size: rem(12);
+    margin-top: $spacer-tiny;
+    letter-spacing: 1px;
+  }
